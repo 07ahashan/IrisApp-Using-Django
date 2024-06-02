@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IrisApp</title>
+  </head>
+  <body>
+	<h1>Welcome to irisApp Django Application</h1>
+    <hr>
+    {% if result %}
+        <h1>Flower you are trying to classify is: {{result}}</h1>
+    {% endif %}
+    <br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        sepal_length:<input type="number" name="sepal_length" required><br>
+        sepal_Width:<input type="number" name="sepal_Width" required><br>
+        petal_length:<input type="number" name="petal_length" required><br>
+        petal_Width:<input type="number" name="petal_Width" required><br>
+
+        <input type="Submit">
+    </form>
+  </body>
+</html>
